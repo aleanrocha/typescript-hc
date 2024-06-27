@@ -95,3 +95,8 @@ function showUserRole(role) {
 }
 console.log(showUserRole(false));
 console.log(showUserRole('Admin'));
+const showId = (id /*id: number | string*/) => {
+    console.log(`O ID é ${id}`);
+};
+showId(5830465803);
+showId('kakufbyq3r7823ifQ');
