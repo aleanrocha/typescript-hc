@@ -208,3 +208,21 @@ const somePerson2: PersonType = {
 }
 
 console.log(somePerson2)
+
+// LITERAL TYPES
+
+let test: 'testando' // tipando a variável com um valor
+
+// test = 'oi' // a variavel só pode conter o valor tipado
+
+test = 'testando'
+
+console.log(test)
+
+// uso real
+
+function showDirection(direction: 'left' | 'right' | 'center') {
+  console.log(`A direção é ${direction}`)
+}
+
+showDirection("left")
