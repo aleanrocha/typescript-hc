@@ -113,3 +113,28 @@ function advancedGreeting(firstName: string, lastName?: string): string {
 console.log(advancedGreeting('Matheus'))
 console.log(advancedGreeting('Matheus', 'Battisti'))
 // console.log(advancedGreeting())
+
+
+// Union Type
+
+function showBalance(balance: string | number) {
+  console.log(balance)
+}
+
+showBalance(600)
+showBalance('900')
+// showBalance(true)
+
+const arr: Array<string | number | boolean> = ['OI', 10, true]
+
+console.log(arr)
+
+function showUserRole(role: string | boolean) {
+  if (typeof role === 'boolean') {
+    return 'Usuário não aprovado'
+  }
+  return 'Usuário aprovado'
+}
+
+console.log(showUserRole(false))
+console.log(showUserRole('Admin'))
