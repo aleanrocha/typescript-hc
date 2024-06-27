@@ -45,3 +45,13 @@ passCoordinates({ x: 2323, y: 3232 });
 // passCoordinates({xBurger: 2323, yBurger: 3232}) // preciso passar os nomes exatos
 const obj = { name: 'Zé', age: 12 };
 console.log(obj);
+// Propiedades opcionais
+function showNumbers(a, b, c) {
+    console.log('A ', a);
+    console.log('B ', b);
+    if (c) {
+        console.log('C ', c);
+    }
+}
+showNumbers(1, 2, 3);
+showNumbers(4, 6);

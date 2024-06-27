@@ -74,3 +74,17 @@ passCoordinates({x: 2323, y: 3232})
 const obj:{name: string, age: number} = {name: 'Zé', age: 12}
 
 console.log(obj)
+
+// Propiedades opcionais
+
+function showNumbers(a: number, b: number, c?: number) {
+  console.log('A ', a)
+  console.log('B ', b)
+  if (c) {
+    console.log('C ', c)
+  }
+}
+
+showNumbers(1,2,3)
+showNumbers(4,6)
+
