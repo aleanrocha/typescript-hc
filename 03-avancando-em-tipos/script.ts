@@ -226,3 +226,16 @@ function showDirection(direction: 'left' | 'right' | 'center') {
 }
 
 showDirection("left")
+
+// Non-null Assertion Operator
+
+/*
+  As vezes o Typescript pode evidenciar um erro, baseado
+  em um valor do código que ainda naão está disponível.
+  Podemos evitar o erro com o caractere !
+*/
+
+// const title = document.getElementById('title')
+
+// console.log(title!.textContent)
+
