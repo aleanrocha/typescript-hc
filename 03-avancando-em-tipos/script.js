@@ -55,3 +55,26 @@ function showNumbers(a, b, c) {
 }
 showNumbers(1, 2, 3);
 showNumbers(4, 6);
+// Validando parâmetro opcional
+/*
+function advancedGreeting(firstName: string, lastName?: string) {
+  if (lastName) {
+    console.log(`Olá eu sou o ${firstName} ${lastName}.`)
+  }
+  console.log(`Olá eu sou o ${firstName}`)
+}
+
+advancedGreeting('João')
+advancedGreeting('João', 9999)
+*/
+function advancedGreeting(firstName, lastName) {
+    if (lastName !== undefined) {
+        // console.log(`Olá eu sou o ${firstName} ${lastName}.`)
+        return `Olá eu sou o ${firstName} ${lastName}.`;
+    }
+    // console.log(`Olá eu sou o ${firstName}`)
+    return `Olá eu sou o ${firstName}`;
+}
+console.log(advancedGreeting('Matheus'));
+console.log(advancedGreeting('Matheus', 'Battisti'));
+// console.log(advancedGreeting())
