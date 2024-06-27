@@ -100,3 +100,29 @@ const showId = (id /*id: number | string*/) => {
 };
 showId(5830465803);
 showId('kakufbyq3r7823ifQ');
+function showCoords(coor) {
+    console.log(`Coordenadas X ${coor.x}`);
+    console.log(`Coordenadas Y ${coor.y}`);
+    console.log(`Coordenadas Z ${coor.z}`);
+}
+const coorObj = {
+    x: 472,
+    y: 133,
+    z: 232
+};
+showCoords(coorObj);
+const somePerson = {
+    name: 'Zezinho',
+    age: 12
+};
+console.log(somePerson);
+/*
+type PersonType = {
+  job: string
+}
+*/
+const somePerson2 = {
+    name: 'Manoel',
+    age: 34
+};
+console.log(somePerson2);

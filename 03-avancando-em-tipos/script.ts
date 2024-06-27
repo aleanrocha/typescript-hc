@@ -150,3 +150,61 @@ const showId = (id: ID /*id: number | string*/) => {
 
 showId(5830465803)
 showId('kakufbyq3r7823ifQ')
+
+// INTERFACES
+
+interface Point {
+  x: number
+  y: number
+  z: number
+}
+
+function showCoords(coor: Point) {
+  console.log(`Coordenadas X ${coor.x}`)
+  console.log(`Coordenadas Y ${coor.y}`)
+  console.log(`Coordenadas Z ${coor.z}`)
+}
+
+const coorObj: Point = {
+  x: 472,
+  y: 133,
+  z: 232
+}
+
+showCoords(coorObj)
+
+// Diferença entre type alias e interface
+// A única diferença e que a interface pode ser alterada ao longo do código, já o alias não.
+
+interface Person {
+  name: string
+}
+
+interface Person {
+  age: number
+}
+
+const somePerson: Person = {
+  name: 'Zezinho',
+  age: 12
+}
+
+console.log(somePerson)
+
+type PersonType = {
+  name: string
+  age: number
+}
+
+/*
+type PersonType = {
+  job: string
+}
+*/
+
+const somePerson2: PersonType = {
+  name: 'Manoel',
+  age: 34
+}
+
+console.log(somePerson2)
