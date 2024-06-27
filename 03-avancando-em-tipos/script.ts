@@ -60,3 +60,17 @@ setTimeout(() => {
   // number = 'oi'
   console.log(number)
 }, 1000)
+
+console.log('-------------------------------TIPOS EM OBJETOS--------------------------------')
+
+function passCoordinates(coor: {x: number, y:number}) {
+  console.log('Coordenadas x', coor.x)
+  console.log('Coordenadas y', coor.y)
+}
+
+passCoordinates({x: 2323, y: 3232})
+// passCoordinates({xBurger: 2323, yBurger: 3232}) // preciso passar os nomes exatos
+
+const obj:{name: string, age: number} = {name: 'Zé', age: 12}
+
+console.log(obj)
