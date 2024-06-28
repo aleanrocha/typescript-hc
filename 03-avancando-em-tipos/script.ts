@@ -239,3 +239,22 @@ showDirection("left")
 
 // console.log(title!.textContent)
 
+
+
+// BIGINT
+
+/*
+  Com o tipo Bigint podemos declarar valores muito altos
+  Podemos utilizar a 'Notação Literal', exemplo: 100n
+  Precisa da versão ES2020
+*/
+
+let n: bigint
+
+// n = 1 // erro - número normal
+
+n = 100n
+
+console.log(n, typeof n)
+
+console.log(n * 300n)
