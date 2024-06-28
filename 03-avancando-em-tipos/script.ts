@@ -240,6 +240,8 @@ showDirection("left")
 // console.log(title!.textContent)
 
 
+console.log('-------------------------------TIPOS NO ES2020 --------------------------------')
+
 
 // BIGINT
 
@@ -258,3 +260,21 @@ n = 100n
 console.log(n, typeof n)
 
 console.log(n * 300n)
+
+// SYMBOL
+
+/*
+  De forma resumida, o symbol cria uma referência única
+  para um valor, ou seja, mesmo que ele possua o mesmo
+  valor que de outra varável, teremos valores sendo
+  considerados diferentes.
+*/
+
+const symbolA: symbol = Symbol('a')
+const symbolB = Symbol('a') // inrerence
+
+console.log(symbolA == symbolB)
+console.log(symbolA === symbolB)
+console.log(typeof symbolA, typeof symbolB)
+
+console.log('-------------------------------------------------------------------------------')
