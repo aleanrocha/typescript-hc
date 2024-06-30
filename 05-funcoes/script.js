@@ -71,3 +71,22 @@ console.log((biggesNUmber('12', '4')));
 //console.log((biggesNUmber(true, false)))
 //console.log((biggesNUmber('1', 2)))
 console.log('----------------------- ----------- -----------------------\n');
+// 05 - Definindo tipo de parâmetros
+/*
+  Em Generic Functions temos que utilizar parâmetros de tipos
+  semelhantes, se não recebemos um erro;
+
+  Porém há a possibilidade de determinar o tipo também dos
+  parãmentros aceitos, com uma sintaxe especial;
+
+  Isso faz com que a validação do TS aceite os tipos escolhidos;
+*/
+console.log('\n----------------------- Definindo tipo de parâmetros -----------------------');
+function mergeArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
+console.log(mergeArrays(['a', 'b', 'c'], ['d', 'e', 'f']));
+// determina o tipo dos parãmetros aceitos
+console.log(mergeArrays([10, 20, 30], ['OI', 'TUDO', 'BEM']));
+console.log('----------------------- ---------------------------- -----------------------\n');
