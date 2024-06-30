@@ -34,3 +34,40 @@ preGreeting(greeting, 'Zezingo')
 preGreeting(greeting, 'Matheus')
 
 console.log('----------------------- ----------------------- -----------------------\n')
+
+// 03 - Generic Function
+/*
+
+  É uma estratégia para quando o tipo de retorno e relacionado
+  ao tipo do argumento;
+
+  Por exemplo, um tipo de um array pode ser, string, boolean ou number;
+
+  Normalmente são utilizadas letras como T ou U para definir os generics
+
+*/
+
+
+console.log('\n----------------------- Generic Function -----------------------')
+
+function firstElement<T>(arr : T[]) : T {
+  return arr[0]
+}
+
+console.log(firstElement([1,2,3,4]))
+console.log(firstElement(['a','b','c']))
+console.log(firstElement([true,'a',1,{}]))
+// console.log(firstElement('teste'))
+
+const mergeObject = <U, T> (obj1: U, obj2: T) => {
+  return {
+    ...obj1,
+    ...obj2
+  }
+}
+
+const newObject = mergeObject({ name: 'Zezinho' }, { age: 32, job: 'Programmer'})
+
+console.log(newObject)
+
+console.log('----------------------- ---------------- -----------------------\n')
