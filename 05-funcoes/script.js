@@ -159,3 +159,12 @@ console.log('A soma de todos os números é', sumAll(1, 2, 3, 4));
 console.log('A soma de todos os números é', sumAll(10, 20, 30, 40));
 console.log('A soma de todos os números é', sumAll(100, 200, 300, 400));
 console.log('----------------------- --------------- -----------------------\n');
+// 11 - Destructuring - Precisamos apenas determinar -
+// o tipo de cada dado que será desentruturado.
+console.log('\n----------------------- Destructuring -----------------------');
+function showProductDetails({ name, price }) {
+    console.log(`O nome do produto é ${name} e custa R$${price}.`);
+}
+showProductDetails({ name: 'Camisa', price: 150 });
+showProductDetails({ name: 'Sapato', price: 250 });
+console.log('----------------------- ------------- -----------------------\n');
