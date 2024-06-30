@@ -71,3 +71,30 @@ const newObject = mergeObject({ name: 'Zezinho' }, { age: 32, job: 'Programmer'}
 console.log(newObject)
 
 console.log('----------------------- ---------------- -----------------------\n')
+
+// 04 - Constraints nas generic functions
+/*
+  As Generic Functions podem ter sue escopo reduzido por constraints;
+  Basicamente limitamos os tipos que podem seu utilizados no generic;
+  Isso faz com que nosso escopo seja menos abrangente;
+*/
+
+console.log('\n----------------------- Constraints -----------------------')
+
+function biggesNUmber<T extends number | string>(a: T, b: T): T {
+  let bigges: T
+
+  if (+a > +b) {
+    bigges = a
+  } else {
+    bigges = b
+  }
+  return bigges
+}
+
+console.log((biggesNUmber(4, 8)))
+console.log((biggesNUmber('12', '4')))
+//console.log((biggesNUmber(true, false)))
+//console.log((biggesNUmber('1', 2)))
+
+console.log('----------------------- ----------- -----------------------\n')
