@@ -147,5 +147,15 @@ console.log('\n----------------------- Tipo never -----------------------');
 function showErrorMessage(msg) {
     throw new Error(msg);
 }
+// Descomente para funcionar
 // showErrorMessage('Deu ruim!')
 console.log('----------------------- ---------- -----------------------\n');
+// 10 - Rest Parameters - Para aplicá-lo basta definir o tipo de dado com a sintaxe REST(...)
+console.log('\n----------------------- Rest Parameters -----------------------');
+function sumAll(...n) {
+    return n.reduce((number, num) => num + number);
+}
+console.log('A soma de todos os números é', sumAll(1, 2, 3, 4));
+console.log('A soma de todos os números é', sumAll(10, 20, 30, 40));
+console.log('A soma de todos os números é', sumAll(100, 200, 300, 400));
+console.log('----------------------- --------------- -----------------------\n');
