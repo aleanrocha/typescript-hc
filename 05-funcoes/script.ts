@@ -144,3 +144,19 @@ console.log(modernGreeting('João', 'Dr.'))
 
 console.log('----------------------- -------------------- -----------------------\n')
 
+// 07 - Argumento Default
+/*
+  Os Argumentos default são os que já possuem um valor definido;
+  Se não passarmos para a função, é utilizado esse valor;
+*/
+
+console.log('\n----------------------- Argumento Default -----------------------')
+
+function sum(n1: number, n2 = 10): string {
+  return `A soma de ${n1} + ${n2} = ${n1+n2}.`
+}
+
+console.log(sum(15))
+console.log(sum(15, 15))
+
+console.log('----------------------- ----------------- -----------------------\n')
