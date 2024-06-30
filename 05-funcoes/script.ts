@@ -184,3 +184,21 @@ doSomething([1, 2, 3, 4])
 doSomething(334)
 
 console.log('----------------------- ------------ -----------------------\n')
+
+// 09 - Tipo never
+
+/*
+  O tipo never é semelhante ao tipo void;
+  Porém é utilizado quando a função não retorna nada;
+  Um exemplo: retorno de erros;
+*/
+
+console.log('\n----------------------- Tipo never -----------------------')
+
+function showErrorMessage(msg: string): never {
+  throw new Error(msg)
+}
+
+// showErrorMessage('Deu ruim!')
+
+console.log('----------------------- ---------- -----------------------\n')
