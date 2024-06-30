@@ -90,3 +90,18 @@ console.log(mergeArrays(['a', 'b', 'c'], ['d', 'e', 'f']));
 // determina o tipo dos parãmetros aceitos
 console.log(mergeArrays([10, 20, 30], ['OI', 'TUDO', 'BEM']));
 console.log('----------------------- ---------------------------- -----------------------\n');
+// 06 - Argumentos Opcionais
+/*
+  Nem sempre utiizamos todos os parãmetros de uma função;
+  Mas, se ele for opcional precisamos declarar isso para o TS;
+*/
+console.log('\n----------------------- Argumentos Opcionais -----------------------');
+const modernGreeting = (name, greet) => {
+    if (greet) {
+        return `Ola ${greet} ${name}, tudo bem?`;
+    }
+    return `Olá ${name}, tudo bem?`;
+};
+console.log(modernGreeting('Matheus'));
+console.log(modernGreeting('João', 'Dr.'));
+console.log('----------------------- -------------------- -----------------------\n');
