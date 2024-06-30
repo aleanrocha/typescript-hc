@@ -160,3 +160,27 @@ console.log(sum(15))
 console.log(sum(15, 15))
 
 console.log('----------------------- ----------------- -----------------------\n')
+
+// 08 - Tipo unknown
+/*
+  O tipo unknown é semelhante ao any, ele aceita qualquer tipo de dado;
+  Porém a diferença é que ela não deixa algo ser executado sem avalidação de tipo;
+  Ou seja, adiciona uma trava de segurança;
+*/
+
+console.log('\n----------------------- Tipo unknown -----------------------')
+
+function doSomething(x: unknown) {
+  console.log(x)
+  if (Array.isArray(x)) {
+    console.log(x[1])
+  } else if (typeof x === 'number') {
+    console.log('Número', x)
+  } 
+}
+
+doSomething('OI')
+doSomething([1, 2, 3, 4])
+doSomething(334)
+
+console.log('----------------------- ------------ -----------------------\n')
