@@ -129,3 +129,20 @@ moreFruits.forEach((fruit) => {
     console.log(`Fruta: ${fruit}`);
 });
 console.log('----------------------- ------------- -----------------------\n');
+// Tuplas
+/*
+  Tupla é um tipo de array, porém definimos a quantidade e o tipo de elementos,
+  Basicamente criamos um novo type, e nele inserimos o array com os tipos necessários,
+  cada tipo conta também como um elemento.
+*/
+console.log('----------------------- TUPLAS -----------------------');
+const myAnimals = ['Dog', 'Cat', 'Horse'];
+// const myAnimals2:animals = ['Dog', 'Cat', 'Horse', 'Cow'] // quantidade superior a quantidade definida
+// const myAnimals3:animals = [2332, 444, 667] // Precisa ser do tipo especificado - string
+console.log(myAnimals);
+const pessoa = ['Zé da Manga', 27];
+console.log(pessoa, typeof pessoa);
+pessoa[0] = 'Ze da Gaia';
+pessoa[1] = 34;
+console.log(pessoa, typeof pessoa);
+console.log('----------------------- ------ -----------------------\n');
