@@ -167,3 +167,66 @@ console.log(goku.superpowers[1])
 
 
 console.log('----------------------- --------------- ----------------------\n')
+
+
+// Intersection TYpes
+
+/*
+  Intersection types são utilizados para criar interfaces mais complexas
+  a partir de duas interfaces, podemos concatenar os tipos com &.
+*/
+
+console.log('----------------------- Intersection Types  -----------------------')
+
+interface Character {
+  name: string
+}
+
+interface Gun {
+  type: string,
+  caliber: number
+}
+
+type HumanWithGun = Character & Gun
+
+const arnold:HumanWithGun = {
+  name: 'Arnold',
+  type: 'Shotgun',
+  caliber: 12
+}
+
+console.log(arnold.name)
+console.log(arnold)
+
+console.log('----------------------- ------------------ ----------------------\n')
+
+
+// ReadOnlyArray
+
+/*
+  O ReadOnlyArray é um tipo para array, que deixa os itgens como readonly,
+  podemos aplicar um tipo para os itens do array além dessa propiedade especial,
+  a modificação de itens pode ser feita através de método, mas nçao podemos aumentar o array.
+*/
+
+console.log('----------------------- ReadOnlyArray -----------------------')
+
+let fruits = ['Morango', 'Maça', 'Pera', 'Abacaxi']
+
+console.log(fruits)
+
+fruits[0] = 'Banana'
+
+console.log('Fruta alterada na posição 0 para', fruits[0])
+
+let moreFruits:ReadonlyArray<string> = ['Laranja', 'Pessego', 'Melancia', 'Manga']
+
+// moreFruits[0] = 'Pera' // não posso alterar
+
+console.log(moreFruits)
+
+moreFruits.forEach((fruit) => {
+  console.log(`Fruta: ${fruit}`)
+})
+
+console.log('----------------------- ------------- -----------------------\n')
