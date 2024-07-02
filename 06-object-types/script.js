@@ -77,3 +77,23 @@ coords.y = 8573;
 coords.z = 6564;
 console.log(coords);
 console.log('----------------------- -------------------- ----------------------\n');
+// Extending TYpes
+/*
+  Utilizamos o Extending TYpes como uma herança para criar tipos mais
+  complexos por meio de uma interface, ou seja, uma interface pode herdar
+  as propiedades e tipos já definidos de outra, isso acontece por meio do extends.
+*/
+console.log('----------------------- Extending Types  -----------------------');
+const zedagaia = {
+    name: 'Zé da Gaia',
+    job: 'Fazendeiro'
+};
+const goku = {
+    name: 'Goku',
+    job: 'Herói',
+    superpowers: ['Kamehameha', 'Genki Dama']
+};
+console.log(zedagaia);
+console.log(goku);
+console.log(goku.superpowers[1]);
+console.log('----------------------- --------------- ----------------------\n');
