@@ -74,3 +74,58 @@ showUserDetails(u1)
 showUserDetails(u2)
 
 console.log('----------------------- ---------- ----------------------\n')
+
+
+
+// Propiedades readonly
+
+/*
+  As propiedades readonly, só pedem ser alteradas apenas uma vez,
+  na criacção do novo dado. É uma forma de criar um valor constante 
+  em um objeto.
+*/
+
+console.log('----------------------- Propiedade readonly -----------------------')
+
+interface Car {
+  brand: string,
+  readonly wheels: number
+}
+
+const car1:Car = {brand: 'Ferrari', wheels: 4}
+
+car1.brand = 'BMW'
+// car1.wheels = 6' // Não posso alterar pq é uma propiedade read-only
+
+console.log(car1)
+
+console.log('----------------------- -------------------- ----------------------\n')
+
+
+
+// Index Signature
+
+/*
+  Utilizamos o Index Signature quando não sabemos os nomes das chaves,
+  mas já sabemos quais os tipos de um objeto ou array, isso restringe
+  a tipos que não devem ser utilizados, uma barreira de segurança a mais
+  na nossa variável.
+*/
+
+console.log('----------------------- Index Signature  -----------------------')
+
+interface Coords {
+  [index: string]: number
+}
+
+const coords:Coords = {
+  x: 5454
+}
+
+coords.y = 8573
+// coords.z = 'teste' // Erro - Não é do tipo number
+coords.z = 6564
+
+console.log(coords)
+
+console.log('----------------------- -------------------- ----------------------\n')
