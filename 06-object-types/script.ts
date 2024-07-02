@@ -263,3 +263,30 @@ console.log(pessoa, typeof pessoa)
 
 
 console.log('----------------------- ------ -----------------------\n')
+
+
+
+// Tuplas com readonly
+
+/*
+ Podemos criar tuplas com a propiedade de readonly, é um tipo
+ de dado super restrito, limita quantos itens teremos, qual o
+ tipo de cada um e também não são modificáveis.
+
+ RECURSO IGUAL AO DO PYTHON
+*/
+
+console.log('----------------------- TUPLAS COM READONLY -----------------------')
+
+const showNumbers = (numbers: readonly [number, number, number]) => {
+  // numbers[0] = 555 
+  console.log(numbers)
+  console.log(numbers[0])
+  console.log(numbers[1])
+  console.log(numbers[2])
+}
+
+showNumbers([1, 2, 3])
+// showNumbers([1, 2, 3, 4])
+
+console.log('----------------------- ------------------- -----------------------\n')
