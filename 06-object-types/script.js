@@ -38,4 +38,14 @@ const pants = {
 showProductDetails(shirt);
 showProductDetails(pants);
 showProductDetails({ name: 'Relógio', price: 540.27, isAvaliable: false });
+const showUserDetails = (user) => {
+    console.log(`\nO usuário tem o e-mail ${user.email}.`);
+    if (user.role) {
+        console.log(`O usuário tem a função de ${user.role}!`);
+    }
+};
+const u1 = { email: 'zezinho@gmail.com', role: 'Admin' };
+const u2 = { email: 'zedagaia@gmail.com' };
+showUserDetails(u1);
+showUserDetails(u2);
 console.log('----------------------- ---------- ----------------------\n');

@@ -53,4 +53,24 @@ showProductDetails(shirt)
 showProductDetails(pants)
 showProductDetails({name: 'Relógio', price: 540.27, isAvaliable: false})
 
+// Interface com parâmetro opcional
+
+interface User {
+  email: string,
+  role?: string
+}
+
+const showUserDetails = (user:User) => {
+  console.log(`\nO usuário tem o e-mail ${user.email}.`)
+  if (user.role) {
+    console.log(`O usuário tem a função de ${user.role}!`)
+  }
+}
+
+const u1:User = {email: 'zezinho@gmail.com', role: 'Admin'}
+const u2:User = {email: 'zedagaia@gmail.com'}
+
+showUserDetails(u1)
+showUserDetails(u2)
+
 console.log('----------------------- ---------- ----------------------\n')
