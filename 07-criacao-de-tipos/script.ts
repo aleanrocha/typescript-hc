@@ -155,3 +155,34 @@ const y:x = 'João'
 console.log(y)
 
 console.log('----------------------- ------------------- -----------------------\n')
+
+
+
+// Indexed AcCess Types - Cria um tipo baseado na chave de um objeto
+
+console.log('----------------------- Indexed Access Types -----------------------')
+
+type Truck = {km: number, kg: number, description: string}
+
+type Km = Truck['km']
+
+const newTruck:Truck = {
+  km: 1280,
+  kg: 3900,
+  description: 'Carga Pesada'
+}
+
+const newCar:Truck = {
+  km: 900,
+  kg: 90,
+  description: 'Carro'
+}
+
+const showKm = (km: Km):string => {
+  return `O veículo rodou ${km}km`
+}
+
+console.log(showKm(newTruck.km))
+console.log(showKm(newCar.km))
+
+console.log('----------------------- ------------------- -----------------------\n')
