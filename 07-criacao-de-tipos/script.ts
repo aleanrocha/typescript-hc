@@ -135,3 +135,23 @@ console.log(showCharName(myChar, "hasDriveLincense"))
 
 console.log('----------------------- ------------------- -----------------------\n')
 
+
+
+// Typeof Type Operator - Cria um novo tipo baseado no tipo de algum dado
+
+console.log('----------------------- TYPEOF TYPE OPERATOR -----------------------')
+
+const userName1: string = 'Zezinho'
+
+const userName2: typeof userName1 = 'Matheus'
+
+console.log(userName1)
+console.log(userName2)
+
+type x = typeof userName1
+
+const y:x = 'João'
+
+console.log(y)
+
+console.log('----------------------- ------------------- -----------------------\n')

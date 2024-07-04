@@ -65,3 +65,12 @@ console.log(showCharName(myChar, "age"));
 console.log(showCharName(myChar, "hasDriveLincense"));
 // console.log(showCharName(myChar, "teste"))
 console.log('----------------------- ------------------- -----------------------\n');
+// Typeof Type Operator - Cria um novo tipo baseado no tipo de algum dado
+console.log('----------------------- TYPEOF TYPE OPERATOR -----------------------');
+const userName1 = 'Zezinho';
+const userName2 = 'Matheus';
+console.log(userName1);
+console.log(userName2);
+const y = 'João';
+console.log(y);
+console.log('----------------------- ------------------- -----------------------\n');
