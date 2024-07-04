@@ -104,3 +104,34 @@ console.log(getSomeKeys(server, "ram"))
 
 console.log('----------------------- -------------- -----------------------\n')
 
+
+
+
+// KEYOF TYPE OPERATOR
+
+/*
+  Com o keyof Type Operator podemos criar um novo tipo,
+  ele aceita dados do tipo objeto, como object literals e arrays,
+  podemos criar os tipos baseados nas chaves do objeto, passado como parãmetro.
+*/
+
+console.log('----------------------- KEYOF TYPE OPERATOR -----------------------')
+
+type Chacarter = {name: string, age: number, hasDriveLincense: boolean}
+
+type C = keyof Chacarter
+
+const showCharName = (obj: Chacarter, key: C):string => {
+  return `Vocẽ escolheu => ${obj[key]}`
+}
+
+const myChar:Chacarter = {name: 'Zé', age: 23, hasDriveLincense: true}
+
+console.log(showCharName(myChar, "name"))
+console.log(showCharName(myChar, "age"))
+console.log(showCharName(myChar, "hasDriveLincense"))
+
+// console.log(showCharName(myChar, "teste"))
+
+console.log('----------------------- ------------------- -----------------------\n')
+
