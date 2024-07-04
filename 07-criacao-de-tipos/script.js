@@ -98,3 +98,13 @@ const n1 = 123;
 const myName = 'ZeDaGaia';
 console.log(myName);
 console.log('----------------------- ----------------- -----------------------\n');
+// Template Literals Type - Criar tipos com template literals
+console.log('----------------------- Template Literals Type -----------------------');
+const testing = 'Some text';
+// const testing2:custumType = 'Some text 2'
+console.log(testing);
+const testA = 'Testando';
+const testA2 = 'Union';
+//const testA3:a3 = 'Uni'
+console.log(testA, testA2);
+console.log('----------------------- ---------------------- -----------------------\n');

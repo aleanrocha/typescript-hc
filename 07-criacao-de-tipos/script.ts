@@ -212,3 +212,31 @@ const myName:myTypeB = 'ZeDaGaia'
 console.log(myName)
 
 console.log('----------------------- ----------------- -----------------------\n')
+
+
+
+// Template Literals Type - Criar tipos com template literals
+
+console.log('----------------------- Template Literals Type -----------------------')
+
+type testA = `text`
+
+type custumType = `Some ${testA}`
+
+const testing:custumType = 'Some text'
+// const testing2:custumType = 'Some text 2'
+
+console.log(testing)
+
+type a1 = 'Testando'
+type a2 = 'Union'
+type a3 = `${a1}` | `${a2}`
+
+const testA:a3 = 'Testando'
+const testA2:a3 = 'Union'
+//const testA3:a3 = 'Uni'
+
+console.log(testA, testA2)
+
+console.log('----------------------- ---------------------- -----------------------\n')
+
