@@ -92,3 +92,9 @@ const showKm = (km) => {
 console.log(showKm(newTruck.km));
 console.log(showKm(newCar.km));
 console.log('----------------------- ------------------- -----------------------\n');
+// Conditional Types - Cria um novo tipo com base no if/else
+console.log('----------------------- Conditional Types -----------------------');
+const n1 = 123;
+const myName = 'ZeDaGaia';
+console.log(myName);
+console.log('----------------------- ----------------- -----------------------\n');

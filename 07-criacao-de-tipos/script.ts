@@ -186,3 +186,29 @@ console.log(showKm(newTruck.km))
 console.log(showKm(newCar.km))
 
 console.log('----------------------- ------------------- -----------------------\n')
+
+
+
+
+// Conditional Types - Cria um novo tipo com base no if/else
+
+console.log('----------------------- Conditional Types -----------------------')
+
+interface A {}
+interface B extends A {}
+interface Test {
+  showName(): string
+}
+
+type myType = B extends A ? number : string
+
+const n1:myType = 123
+// const n2:myType = '123' // erro - só aceita número
+
+type myTypeB = Test extends {showName(): string} ? string : boolean
+
+const myName:myTypeB = 'ZeDaGaia'
+
+console.log(myName)
+
+console.log('----------------------- ----------------- -----------------------\n')
