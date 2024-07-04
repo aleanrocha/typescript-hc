@@ -38,3 +38,14 @@ console.log(myPen);
 console.log(zedamanga);
 console.log(zedagaia);
 console.log('----------------------- ---------------------- -----------------------\n');
+// TYPE PARAMETERS 
+console.log('----------------------- TYPE PARAMETERS -----------------------');
+const getSomeKeys = (obj, key) => {
+    return `A chave ${String(key)} está presente no objeto e tem o valor de ${obj[key]}`;
+};
+const server = {
+    hd: '256GB',
+    ram: '32GB'
+};
+console.log(getSomeKeys(server, "ram"));
+console.log('----------------------- -------------- -----------------------\n');
