@@ -372,3 +372,22 @@ const zezinho = new PrivateClass('Zezinho')
 
 console.log('Eu sou Private e meu nome é', zezinho.showName)
 zezinho.showPrivateMethod()
+
+console.log('----------------------------------------------------')
+
+// 12 - Static Members
+
+class StaticMembers {
+  static prop = 'Lá ele'
+
+  static staticMethod():string {
+    return 'Eu sou um método estático'
+  }
+}
+
+console.log(StaticMembers)
+console.log(StaticMembers.prop)
+console.log(StaticMembers.staticMethod())
+
+console.log('----------------------------------------------------')
+
