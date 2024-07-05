@@ -391,3 +391,34 @@ console.log(StaticMembers.staticMethod())
 
 console.log('----------------------------------------------------')
 
+// 13 - Generic Class
+
+class Items<T, U> {
+  first
+  second
+
+  constructor(first: T, second: U) {
+    this.first = first
+    this.second = second
+  }
+
+  showItems():string {
+    return `O primeiro item é ${this.first} e o segundo é ${this.second}`
+  }
+}
+
+const newItem = new Items('Caixa', 'Misteriosa')
+const anotherItem = new Items(18, true)
+
+console.log(newItem)
+console.log(newItem.showItems())
+
+console.log(newItem.first, typeof newItem.first)
+console.log(newItem.second, typeof newItem.second)
+
+
+console.log(anotherItem)
+console.log(anotherItem.showItems())
+
+console.log(anotherItem.first, typeof anotherItem.first)
+console.log(anotherItem.second, typeof anotherItem.second)
