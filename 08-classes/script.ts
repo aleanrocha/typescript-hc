@@ -68,3 +68,54 @@ car1.name = 'Gol'
 // car1.wheels = 8 // erro - o valor não pode ser alterado
 
 console.log(car1)
+
+console.log('----------------------------------------------------')
+
+// 04 - Herança e Super 
+
+class Machine {
+  name 
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+class KillerMachine extends Machine {
+  guns
+  constructor(name: string, guns: number) {
+    super(name)
+    this.guns = guns
+  }
+}
+
+const newCar = new Machine('Toro')
+const trator = new KillerMachine('Trator', 55)
+
+console.log(newCar)
+console.log(trator)
+
+trator.guns = 120
+
+console.log(trator)
+
+console.log('----------------------------------------------------')
+
+// 05 - Métodos
+
+class Dwarf {
+  name
+
+  constructor(name: string) {
+    this.name = name
+  }
+
+  greeting() {
+    return `Olá ${this.name}, tudo bem?`
+  }
+}
+
+const jimmy = new Dwarf('Jimmy')
+
+console.log(jimmy)
+console.log(jimmy.name)
+console.log(jimmy.greeting())
