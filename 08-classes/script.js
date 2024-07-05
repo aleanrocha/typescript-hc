@@ -77,7 +77,7 @@ console.log(jimmy);
 console.log(jimmy.name);
 console.log(jimmy.greeting());
 console.log('----------------------------------------------------');
-// this
+// 06 - this
 class Truck {
     constructor(model, hp) {
         this.model = model;
@@ -92,3 +92,45 @@ const scania = new Truck('Scania', 600);
 volvo.showDetails();
 scania.showDetails();
 console.log('----------------------------------------------------');
+// 07 - Getters
+class Person {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+    // retorna e também pode mpdificar o retorno
+    get fullname() {
+        return `Seu nome completo é ${this.name} ${this.surname}`;
+    }
+}
+const zedamanga = new Person('Zé', 'da Manga');
+const mat = new Person('Matheus', 'Battisti');
+console.log(zedamanga.fullname.toLocaleUpperCase());
+console.log(mat.fullname.toLocaleLowerCase());
+console.log('----------------------------------------------------');
+// 08 - Setters
+class Coords {
+    set fillX(x) {
+        if (x === 0) {
+            return;
+        }
+        this.x = x;
+        console.log('X inserido com sucesso!');
+    }
+    set fillY(y) {
+        if (y === 0) {
+            return;
+        }
+        this.y = y;
+        console.log('Y inserido com sucesso!');
+    }
+    get getCoords() {
+        return `As coordenadas são x:${this.x} y:${this.y}`;
+    }
+}
+const myCoords = new Coords();
+myCoords.fillY = 353453;
+myCoords.fillX = 0;
+myCoords.fillX = 753643;
+console.log(myCoords);
+console.log(myCoords.getCoords);
