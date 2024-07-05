@@ -172,3 +172,76 @@ class Nova extends Base {
 }
 const myObject = new Nova();
 myObject.someMethod();
+console.log('----------------------------------------------------');
+// 11 - Visibilidade de propiedades e métodos
+/*
+  Visibilidade é o conceito de expor nossos métodos de classes;
+  PUBLIC: Default, pode ser acessado de qualquero lugar;
+  PROTECTED: Acessível apenas a subclasses da classe do método;
+  PRIVATE: Apenas a classe que declarou o método pode utilizar;
+*/
+// Public
+class C {
+    constructor() {
+        this.x = 10;
+    }
+}
+class D extends C {
+    constructor() {
+        super(...arguments);
+        this.y = 20;
+    }
+}
+const cInstance = new C();
+const dInstance = new D();
+console.log('Class C - PAI', cInstance.x);
+console.log('Class D', dInstance.x);
+// Protected
+class E {
+    constructor() {
+        this.x = 50;
+    }
+    protectedY() {
+        return `Eu sou um método com protected da classe E`;
+    }
+}
+// só posso acessar uma propiedade herdada com protected através de um método
+class F extends E {
+    showX() {
+        return `O valor da propiedade x herdada de E é ${this.x}`;
+    }
+    showProtectedY() {
+        return this.protectedY();
+    }
+}
+const fInstance = new F();
+console.log(fInstance.showX());
+console.log(fInstance.showProtectedY());
+// Private
+class PrivateClass {
+    constructor(name, age) {
+        this.name = name;
+        if (age) {
+            this.age = age;
+        }
+    }
+    get showName() {
+        return this.name;
+    }
+    privateMethod() {
+        console.log('Eu sou um Private Method');
+    }
+    showPrivateMethod() {
+        this.privateMethod();
+    }
+}
+/*
+class testingPrivateClass extends PrivateClass {
+  method() {
+    this.privateMethod()
+  }
+}
+*/
+const zezinho = new PrivateClass('Zezinho');
+console.log('Eu sou Private e meu nome é', zezinho.showName);
+zezinho.showPrivateMethod();
