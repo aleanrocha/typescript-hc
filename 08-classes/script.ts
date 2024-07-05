@@ -213,4 +213,44 @@ myCoords.fillX = 753643
 console.log(myCoords)
 console.log(myCoords.getCoords)
 
+console.log('----------------------------------------------------')
 
+// 09 - Herança de Interfaces
+
+interface showTitle {
+  itemTitle(): string
+}
+
+class Blog implements showTitle {
+  title
+
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle(): string {
+    return `O título do post é ${this.title}`
+  }
+}
+
+const newPost = new Blog('Título de Teste')
+
+console.log(newPost.title)
+console.log(newPost.itemTitle())
+
+class TestingInterface implements showTitle {
+  title
+
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle(): string {
+    return `O outro título do post é ${this.title}`
+  }
+}
+
+const otherPost =  new Blog('Hello Developer`s')
+
+console.log(otherPost.title)
+console.log(otherPost.itemTitle())

@@ -134,3 +134,26 @@ myCoords.fillX = 0;
 myCoords.fillX = 753643;
 console.log(myCoords);
 console.log(myCoords.getCoords);
+console.log('----------------------------------------------------');
+class Blog {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O título do post é ${this.title}`;
+    }
+}
+const newPost = new Blog('Título de Teste');
+console.log(newPost.title);
+console.log(newPost.itemTitle());
+class TestingInterface {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O outro título do post é ${this.title}`;
+    }
+}
+const otherPost = new Blog('Hello Developer`s');
+console.log(otherPost.title);
+console.log(otherPost.itemTitle());
