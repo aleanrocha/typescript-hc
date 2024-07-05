@@ -44,3 +44,27 @@ const zedagaia:NewUser = new NewUser('Zé da Gaia', 29, 'Dev')
 
 console.log(ze)
 console.log(zedagaia)
+
+console.log('----------------------------------------------------')
+
+// 03 - Propiedades readonly
+
+class Car {
+  name
+  readonly wheels = 4
+
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+const car1 = new Car('Fusca')
+const car2 = new Car('Ferrari')
+
+console.log(car1)
+console.log(car2)
+
+car1.name = 'Gol'
+// car1.wheels = 8 // erro - o valor não pode ser alterado
+
+console.log(car1)

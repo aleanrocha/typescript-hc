@@ -28,3 +28,18 @@ const ze = new NewUser('Zé', 26, 'Developer');
 const zedagaia = new NewUser('Zé da Gaia', 29, 'Dev');
 console.log(ze);
 console.log(zedagaia);
+console.log('----------------------------------------------------');
+// 03 - Propiedades readonly
+class Car {
+    constructor(name) {
+        this.wheels = 4;
+        this.name = name;
+    }
+}
+const car1 = new Car('Fusca');
+const car2 = new Car('Ferrari');
+console.log(car1);
+console.log(car2);
+car1.name = 'Gol';
+// car1.wheels = 8 // erro - o valor não pode ser alterado
+console.log(car1);
