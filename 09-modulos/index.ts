@@ -14,3 +14,12 @@
 import greet from './imports/greet.js'
 
 greet()
+
+console.log('------------------------------------------------')
+
+// 02 - Importando variáveis
+
+import { x } from './imports/variable.js'
+
+console.log(x)
+

@@ -15,3 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // 01 - Importando a função
 const greet_js_1 = __importDefault(require("./imports/greet.js"));
 (0, greet_js_1.default)();
+console.log('------------------------------------------------');
+// 02 - Importando variáveis
+const variable_js_1 = require("./imports/variable.js");
+console.log(variable_js_1.x);
