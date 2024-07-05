@@ -316,3 +316,23 @@ const newPerson = new classExpression('Bartolomeu');
 console.log(classExpression);
 console.log(newPerson);
 console.log(newPerson.showName);
+console.log('----------------------------------------------------');
+// 16 - Abstract class
+// semelhante ao uso da interface
+class AbstractClass {
+}
+class AbstractExemple extends AbstractClass {
+    constructor(name) {
+        super();
+        this.name = name;
+        this.name = name;
+    }
+    showName() {
+        return `O nome é ${this.name}`;
+    }
+}
+// const test = new AbstractClass() // não posso criar uma instância de uma classe abstrata
+const zuza = new AbstractExemple('Zuza');
+console.log(zuza);
+console.log(zuza.name);
+console.log(zuza.showName());
