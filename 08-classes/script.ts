@@ -119,3 +119,30 @@ const jimmy = new Dwarf('Jimmy')
 console.log(jimmy)
 console.log(jimmy.name)
 console.log(jimmy.greeting())
+
+console.log('----------------------------------------------------')
+
+// this
+
+class Truck {
+  model
+  hp 
+
+  constructor(model: string, hp: number) {
+    this.model = model
+    this.hp = hp
+  } 
+
+  showDetails() {
+    console.log(`O caminhão do modelo ${this.model}, tem ${this.hp} cavalos de potẽncia.`)
+  }
+}
+
+const volvo = new Truck('Volvo', 400)
+const scania = new Truck('Scania', 600)
+
+
+volvo.showDetails()
+scania.showDetails()
+
+console.log('----------------------------------------------------')
