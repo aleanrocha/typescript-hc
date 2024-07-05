@@ -277,3 +277,27 @@ console.log(anotherItem);
 console.log(anotherItem.showItems());
 console.log(anotherItem.first, typeof anotherItem.first);
 console.log(anotherItem.second, typeof anotherItem.second);
+console.log('----------------------------------------------------');
+// 14 - Parameters Properties
+class ParametersProperties {
+    constructor(name, qtn, price) {
+        this.name = name;
+        this.qtn = qtn;
+        this.price = price;
+        this.name = name;
+        this.qtn = qtn;
+        this.price = price;
+    }
+    get showQtn() {
+        return `A quantidade é ${this.qtn}!`;
+    }
+    get showPrice() {
+        return `O preço é ${this.price}!`;
+    }
+}
+const shirt = new ParametersProperties('Camisa', 2, 99.99);
+console.log(shirt);
+console.log(shirt.name);
+// console.log(shirt.price)
+console.log(shirt.showQtn);
+console.log(shirt.showPrice);
