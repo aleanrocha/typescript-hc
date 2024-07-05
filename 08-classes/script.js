@@ -157,3 +157,18 @@ class TestingInterface {
 const otherPost = new Blog('Hello Developer`s');
 console.log(otherPost.title);
 console.log(otherPost.itemTitle());
+console.log('----------------------------------------------------');
+// 10 - Override de métodos
+class Base {
+    someMethod() {
+        console.log('Alguma coisa - Origem - Classe PAI');
+    }
+}
+class Nova extends Base {
+    // subistitui o método da classe que herdamos - override
+    someMethod() {
+        console.log('Alguma coisa - Origem - Daqui mesmo');
+    }
+}
+const myObject = new Nova();
+myObject.someMethod();
