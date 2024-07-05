@@ -7,7 +7,7 @@
   também, note que um campo declarado como vazio deve conter o sinal de !.
 */
 
-// Campos em Classe
+// 01 - Campos em Classe
 
 class User {
   name!: string
@@ -25,3 +25,22 @@ console.log(matheus.name)
 console.log(matheus.age)
 
 console.log('----------------------------------------------------')
+
+// 02 - CONSTRUCTOR
+
+class NewUser {
+  name 
+  age
+  job
+  constructor(name: string, age: number, job: string) {
+    this.name = name
+    this.age = age
+    this.job = job
+  }
+}
+
+const ze:NewUser = new NewUser('Zé', 26, 'Developer')
+const zedagaia:NewUser = new NewUser('Zé da Gaia', 29, 'Dev')
+
+console.log(ze)
+console.log(zedagaia)
