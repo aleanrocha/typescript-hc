@@ -456,3 +456,23 @@ console.log(shirt.name)
 
 console.log(shirt.showQtn)
 console.log(shirt.showPrice)
+
+
+console.log('----------------------------------------------------')
+
+// 15 - Class Expressions
+
+const classExpression = class<T> {
+  constructor(public name: T) {
+    this.name = name
+  }
+  get showName(): string {
+    return `O nome do indivíduo é ${this.name}!`
+  }
+}
+
+const newPerson = new classExpression('Bartolomeu')
+
+console.log(classExpression)
+console.log(newPerson)
+console.log(newPerson.showName)
