@@ -13,9 +13,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
   Utilizaremos o Node.js para executar os arquivos com módulos
 */
 // 01 - Importando a função
-const greet_js_1 = __importDefault(require("./imports/greet.js"));
+const greet_js_1 = __importDefault(require("./exports/greet.js"));
 (0, greet_js_1.default)();
 console.log('------------------------------------------------');
 // 02 - Importando variáveis
-const variable_js_1 = require("./imports/variable.js");
+const variable_js_1 = require("./exports/variable.js");
 console.log(variable_js_1.x);

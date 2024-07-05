@@ -11,7 +11,7 @@
 
 // 01 - Importando a função
 
-import greet from './imports/greet.js'
+import greet from './exports/greet.js'
 
 greet()
 
@@ -19,7 +19,7 @@ console.log('------------------------------------------------')
 
 // 02 - Importando variáveis
 
-import { x } from './imports/variable.js'
+import { x } from './exports/variable.js'
 
 console.log(x)
 
