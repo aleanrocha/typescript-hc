@@ -19,3 +19,9 @@ console.log('------------------------------------------------');
 // 02 - Importando variáveis
 const variable_js_1 = require("./exports/variable.js");
 console.log(variable_js_1.x);
+console.log('------------------------------------------------');
+// 03 - Múltiplas Importações
+const multiple_js_1 = require("./exports/multiple.js");
+console.log('Nome:', multiple_js_1.firstname);
+console.log('Idade:', multiple_js_1.age);
+console.log((0, multiple_js_1.greeting)(multiple_js_1.firstname));

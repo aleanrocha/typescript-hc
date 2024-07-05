@@ -23,3 +23,13 @@ import { x } from './exports/variable.js'
 
 console.log(x)
 
+console.log('------------------------------------------------')
+
+// 03 - Múltiplas Importações
+
+import { firstname, age, greeting } from './exports/multiple.js'
+
+console.log('Nome:', firstname)
+console.log('Idade:', age)
+
+console.log(greeting(firstname))
