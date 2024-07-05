@@ -336,3 +336,13 @@ const zuza = new AbstractExemple('Zuza');
 console.log(zuza);
 console.log(zuza.name);
 console.log(zuza.showName());
+console.log('----------------------------------------------------');
+// 17 - Relações entre classes
+class Dog {
+}
+class Cat {
+}
+const doguinho = new Cat();
+doguinho.name = 'Tata';
+console.log(doguinho);
+console.log(doguinho.name);
