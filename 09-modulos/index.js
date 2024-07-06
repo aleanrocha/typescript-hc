@@ -25,3 +25,8 @@ const multiple_js_1 = require("./exports/multiple.js");
 console.log('Nome:', multiple_js_1.firstname);
 console.log('Idade:', multiple_js_1.age);
 console.log((0, multiple_js_1.greeting)(multiple_js_1.firstname));
+console.log('------------------------------------------------');
+// 04 - Alias - Podemos mudar o nome do que foi importado
+const changeName_js_1 = require("./exports/changeName.js");
+console.log(`Meu nome é ${changeName_js_1.someName}`);
+console.log('------------------------------------------------');

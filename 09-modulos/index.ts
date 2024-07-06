@@ -33,3 +33,14 @@ console.log('Nome:', firstname)
 console.log('Idade:', age)
 
 console.log(greeting(firstname))
+
+console.log('------------------------------------------------')
+
+// 04 - Alias - Podemos mudar o nome do que foi importado
+
+import { someName as name } from './exports/changeName.js'
+
+console.log(`Meu nome é ${name}`)
+
+console.log('------------------------------------------------')
+

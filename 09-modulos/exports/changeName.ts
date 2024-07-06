@@ -1,0 +1,1 @@
+export const someName = 'Zé da Gaia'
