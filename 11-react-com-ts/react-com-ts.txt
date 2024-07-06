@@ -1,0 +1,13 @@
+React Com TypeScript
+
+Adicionar o TypeScript ao React nos da mais possibilidades;
+
+Seguindo a mesma linha de que me JS, temos uma forma mais 
+padronizada para programar;
+
+Como tipos para componentes ou mapeamentos de props
+por meio de interfaces;
+
+Isso dá mais confiabilidade ao projeto e está sendo cada vez
+mais utilizado hoje em dia;
+
