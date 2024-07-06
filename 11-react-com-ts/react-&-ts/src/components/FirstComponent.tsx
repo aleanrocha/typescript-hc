@@ -5,7 +5,9 @@ import { ReactElement } from 'react';
 const FirstComponent = ():ReactElement => {
   return (
     <div>
-      Meu primeiro componente
+      <h3>
+        Meu primeiro componente
+      </h3>
     </div>
   )
 }

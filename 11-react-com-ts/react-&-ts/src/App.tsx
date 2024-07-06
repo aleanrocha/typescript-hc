@@ -2,6 +2,11 @@
 
 import FirstComponent from './components/FirstComponent'
 
+// 04 destructuring
+
+import SecondComponent from './components/SecondComponent'
+import Destructuring from './components/Destructuring'
+
 const App = () => {
 
   // 01 - Variáveis
@@ -30,6 +35,16 @@ const App = () => {
 
       <FirstComponent />
       <FirstComponent />
+
+      <SecondComponent name='João' />
+      <SecondComponent name='Matheus' />
+
+      <Destructuring 
+        title='Hello World'
+        content='Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
+        commentsQty={87}
+        tags={['Lorem', 'Ipsum', 'Programming', 'TV', 'Movies']}
+      />
 
      </div>
     </>
