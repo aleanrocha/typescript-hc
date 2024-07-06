@@ -6,7 +6,7 @@ import FirstComponent from './components/FirstComponent'
 
 import SecondComponent from './components/SecondComponent'
 
-// 5 + enum
+// 6 + enum
 import Destructuring, { Category } from './components/Destructuring'
 
 // - 5 useState
@@ -28,6 +28,19 @@ const App = () => {
   const showUserName = (name: myName):myName => {
     return `Olá ${name}, tudo bem?`
   }
+
+  // 7 types
+
+  type textOrNull = string | null
+  type Fixed = 'Eu' | 'TU' | 'ELE'
+
+  const textExemple:textOrNull = 'Eu sou um texto'
+  const textExemple2:textOrNull = null
+  
+  //const textExemple3:Fixed = 'Outro Tipo'
+  const textExemple3:Fixed = 'Eu'
+  
+  console.log(textExemple3)
 
   return (
     <>
@@ -54,6 +67,14 @@ const App = () => {
       />
 
       <State />
+
+      {textExemple &&
+        <h4>{textExemple}</h4>
+      }
+
+      {textExemple2 &&
+        <h4>{textExemple2}</h4>
+      }
      </div>
     </>
   )
