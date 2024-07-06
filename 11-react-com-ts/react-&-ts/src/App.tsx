@@ -12,6 +12,19 @@ import Destructuring, { Category } from './components/Destructuring'
 // - 5 useState
 
 import { State } from './components/State'
+import { createContext } from 'react'
+
+// 8 - Context
+
+interface IAppContext {
+  language: string
+  framework: string
+  projectsQtn: number
+}
+
+export const AppContext = createContext<IAppContext | null>(null) 
+
+import Context from './components/Context'
 
 const App = () => {
 
@@ -42,8 +55,14 @@ const App = () => {
   
   console.log(textExemple3)
 
+  const contextValeus:IAppContext = {
+    language: 'JavaScript',
+    framework: 'Express',
+    projectsQtn: 5
+  }
+
   return (
-    <>
+    <AppContext.Provider value={contextValeus}>
      <h1>Hello React with TypeScript</h1>
      <div>
       <h2>Nome: {name}</h2>
@@ -76,7 +95,8 @@ const App = () => {
         <h4>{textExemple2}</h4>
       }
      </div>
-    </>
+     <Context />
+    </AppContext.Provider>
   )
 }
 
