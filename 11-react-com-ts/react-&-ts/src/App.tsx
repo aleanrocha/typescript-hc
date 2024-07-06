@@ -5,7 +5,9 @@ import FirstComponent from './components/FirstComponent'
 // 04 destructuring
 
 import SecondComponent from './components/SecondComponent'
-import Destructuring from './components/Destructuring'
+
+// 5 + enum
+import Destructuring, { Category } from './components/Destructuring'
 
 // - 5 useState
 
@@ -47,6 +49,7 @@ const App = () => {
         title='Hello World'
         content='Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
         commentsQty={87}
+        category={Category.TS}
         tags={['Lorem', 'Ipsum', 'Programming', 'TV', 'Movies']}
       />
 
