@@ -1,3 +1,7 @@
+// 03 - Criando e importando componente
+
+import FirstComponent from './components/FirstComponent'
+
 const App = () => {
 
   // 01 - Variáveis
@@ -12,7 +16,7 @@ const App = () => {
 
   const showUserName = (name: myName):myName => {
     return `Olá ${name}, tudo bem?`
-  }  
+  }
 
   return (
     <>
@@ -23,6 +27,10 @@ const App = () => {
       {isWorking && <p>Está trabalhando!</p>}
 
       {showUserName(name)}
+
+      <FirstComponent />
+      <FirstComponent />
+
      </div>
     </>
   )
