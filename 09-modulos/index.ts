@@ -44,3 +44,19 @@ console.log(`Meu nome é ${name}`)
 
 console.log('------------------------------------------------')
 
+// 05 - Importando tudo com o caractere coringa *
+
+import * as myNumbers from './exports/numbers.js'
+
+console.log(myNumbers)
+
+const n1 = myNumbers.n1
+
+console.log('O primeiro número é', n1)
+
+myNumbers.showNumber(myNumbers.n4)
+
+
+
+
+
