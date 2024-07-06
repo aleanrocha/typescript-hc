@@ -7,6 +7,10 @@ import FirstComponent from './components/FirstComponent'
 import SecondComponent from './components/SecondComponent'
 import Destructuring from './components/Destructuring'
 
+// - 5 useState
+
+import { State } from './components/State'
+
 const App = () => {
 
   // 01 - Variáveis
@@ -46,6 +50,7 @@ const App = () => {
         tags={['Lorem', 'Ipsum', 'Programming', 'TV', 'Movies']}
       />
 
+      <State />
      </div>
     </>
   )
