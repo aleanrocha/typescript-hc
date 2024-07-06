@@ -57,6 +57,24 @@ console.log('O primeiro número é', n1)
 myNumbers.showNumber(myNumbers.n4)
 
 
+console.log('------------------------------------------------')
 
+// 06 - Importando tipos
 
+import { Human } from './exports/myTypes.js'
 
+class Person implements Human {
+  constructor(
+    public name: string,
+    public age: number,
+    public job: string
+  ) {
+    this.name = name
+    this.age = age
+    this.job = job
+  }
+}
+
+const zedagaia:Person = new Person('Zé da Gais', 87, 'Programmer')
+
+console.log(zedagaia)

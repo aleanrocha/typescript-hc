@@ -59,3 +59,16 @@ console.log(myNumbers);
 const n1 = myNumbers.n1;
 console.log('O primeiro número é', n1);
 myNumbers.showNumber(myNumbers.n4);
+console.log('------------------------------------------------');
+class Person {
+    constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
+}
+const zedagaia = new Person('Zé da Gais', 87, 'Programmer');
+console.log(zedagaia);
