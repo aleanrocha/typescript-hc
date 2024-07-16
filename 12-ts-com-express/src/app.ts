@@ -5,7 +5,7 @@
 // 02 - init express
 
 
-import express from 'express'
+import express, { Request, Response} from 'express'
 
 const app = express()
 const port = 3001
@@ -35,6 +35,12 @@ app.all('/api/product/check', (req, res) => {
   } else {
     return res.send({ message: 'Não podemos realizar está operação! '})
   }
+})
+
+// 5 - interfaces do express
+
+app.get('/api/interfaces', (req: Request, res: Response) => {
+  return res.send({ message: 'Utilizando interfaces do express'})
 })
 
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
