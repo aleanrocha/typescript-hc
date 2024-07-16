@@ -43,4 +43,15 @@ app.get('/api/interfaces', (req: Request, res: Response) => {
   return res.send({ message: 'Utilizando interfaces do express'})
 })
 
+// 6 - enviando json
+
+app.get('/api/json', (req: Request, res: Response) => {
+  res.json({
+    name: 'Shirt',
+    price: 99.99,
+    color: 'Black',
+    sizes: ['P', 'M', 'G', 'GG']
+  })
+})
+
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
