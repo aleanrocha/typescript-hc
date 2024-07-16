@@ -25,4 +25,16 @@ app.post('/api/product', (req, res) => {
   return res.send({ message: 'Produto adicionado!' })
 })
 
+// 04 - Rota para todos os verbos - CORINGA
+
+app.all('/api/product/check', (req, res) => {
+  if (req.method === 'POST') {
+    return res.send({ message: 'Inseriu algum registro!'})
+  } else if (req.method === 'GET') {
+    return res.send({ message: 'Leu algum registro!'})
+  } else {
+    return res.send({ message: 'Não podemos realizar está operação! '})
+  }
+})
+
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
