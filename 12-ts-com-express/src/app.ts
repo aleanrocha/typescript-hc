@@ -54,4 +54,20 @@ app.get('/api/json', (req: Request, res: Response) => {
   })
 })
 
+// 7 - router parameters
+
+app.get('/api/product/:id', (req: Request, res: Response) => {
+  const id = req.params.id
+  if (id === '1') {
+    const data:object = {
+      name: 'Short',
+      price: 99.99,
+      color: 'blue'
+    }
+    return res.json({ product: data })
+  } else {
+    return res.json('Produto não encontrado!')
+  }
+})
+
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
