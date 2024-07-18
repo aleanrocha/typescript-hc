@@ -79,4 +79,12 @@ app.get('/api/product/:productId/review/:reviewId', (req: Request, res: Response
   return res.send(`Acessando review ${reviewId} do produto ${productId}`)
 })
 
+// 9 - router handler
+const getUser = (req: Request, res: Response) => {
+  console.log(`Resgatando uúsario com o ID ${req.params.id}`)
+  return res.send('O usuário foi encontrado! ')
+}
+
+app.get('/api/user/:id', getUser)
+
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
