@@ -123,6 +123,17 @@ app.get('/api/user/:id/details/:name',
     return res.json({ status: true })
 })
 
+// 13 - tratando erros
+
+app.get('/api/error', (req: Request, res: Response) => {
+  try {
+    // sua lógica
+    throw new Error('Ops, algo deu ruim!')
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message})
+  }
+})
+
 app.get('/api/user/:id', getUser)
 
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
