@@ -109,6 +109,20 @@ app.get('/api/user/:id', checkUser, (req: Request, res: Response) => {
   return res.json({ msg: 'Seja muito bem vindo!'})
 })
 
+// 12 - interfaces de requisição e resposta
+
+app.get('/api/user/:id/details/:name', 
+  (
+    req: Request<{ id: string, name: string}>,
+    res: Response<{ status: boolean}>
+  ) => {
+    const id = req.params.id
+    const name = req.params.name
+    console.log(`ID: ${id}`)
+    console.log(`NAME: ${name}`)
+    return res.json({ status: true })
+})
+
 app.get('/api/user/:id', getUser)
 
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
