@@ -5,7 +5,7 @@
 // 02 - init express
 
 
-import express, { Request, Response} from 'express'
+import express, { NextFunction, Request, Response} from 'express'
 
 const app = express()
 const port = 3001
@@ -13,6 +13,14 @@ const port = 3001
 // Habilitando json
 
 app.use(express.json())
+
+// 11 - middleware para todas as rotas
+
+const hello = (req: Request, res: Response, next: NextFunction) => {
+  console.log('Hello world')
+  next()
+}
+app.use(hello)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -84,6 +92,22 @@ const getUser = (req: Request, res: Response) => {
   console.log(`Resgatando uúsario com o ID ${req.params.id}`)
   return res.send('O usuário foi encontrado! ')
 }
+
+// 10 - middleware
+
+const checkUser = (req: Request, res: Response, next: NextFunction) => {
+  const userId = req.params.id
+  if(userId === '1') {
+    console.log('Acesso permitido!')
+    next()
+  } else {
+    console.log('Acesso negado!')
+  }
+}
+
+app.get('/api/user/:id', checkUser, (req: Request, res: Response) => {
+  return res.json({ msg: 'Seja muito bem vindo!'})
+})
 
 app.get('/api/user/:id', getUser)
 
