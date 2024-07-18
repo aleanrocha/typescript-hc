@@ -70,4 +70,13 @@ app.get('/api/product/:id', (req: Request, res: Response) => {
   }
 })
 
+// 8 - rotas mais complexas
+
+app.get('/api/product/:productId/review/:reviewId', (req: Request, res: Response) => {
+  console.log(req.params)
+  const productId = req.params.productId
+  const reviewId = req.params.reviewId
+  return res.send(`Acessando review ${reviewId} do produto ${productId}`)
+})
+
 app.listen(port, () => console.log(`Server started on port ${port} 🚀`))
